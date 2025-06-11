@@ -21,17 +21,15 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link href="/research" className="px-3 py-2 rounded-md text-sm font-medium hover:text-white hover:bg-[#1E3A8A] transition-colors">
-                Research
+                Upload
               </Link>
               <Link href="/explore" className="px-3 py-2 rounded-md text-sm font-medium hover:text-white hover:bg-[#1E3A8A] transition-colors">
                 Explore
               </Link>
               <Link href="/publish" className="px-3 py-2 rounded-md text-sm font-medium hover:text-white hover:bg-[#1E3A8A] transition-colors">
-                Publish
+                Earnings
               </Link>
-              <Link href="/about" className="px-3 py-2 rounded-md text-sm font-medium hover:text-white hover:bg-[#1E3A8A] transition-colors">
-                About
-              </Link>
+            
             </div>
           </div>
 
