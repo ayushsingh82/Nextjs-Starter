@@ -9,14 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@rainbow-me/rainbowkit": "^2.2.8",
     "@tabler/icons-react": "^3.34.0",
+    "@tanstack/react-query": "^5.81.5",
     "clsx": "^2.1.1",
     "motion": "^12.23.0",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-dropzone": "^14.3.8",
-    "tailwind-merge": "^3.3.1"
+    "simplex-noise": "^4.0.3",
+    "tailwind-merge": "^3.3.1",
+    "viem": "^2.31.7",
+    "wagmi": "^2.15.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

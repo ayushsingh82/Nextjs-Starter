@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
           {/* Logo and brand name */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="text-3xl font-bold text-white">ReSearchFi</span>
+              <span className="text-3xl font-bold text-white">Starter</span>
             </Link>
           </div>
 
@@ -90,7 +91,7 @@ const Navbar = () => {
               About
             </Link>
             <button className="w-full mt-4 bg-[#1E3A8A] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#2563EB] transition-colors">
-              Connect Wallet
+            <ConnectButton/>
             </button>
           </div>
         </div>

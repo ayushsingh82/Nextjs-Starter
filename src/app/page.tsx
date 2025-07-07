@@ -2,6 +2,20 @@ import Link from 'next/link';
 
 import { cn } from "@/lib/utils";
 import { Spotlight } from "@/components/ui/Spotlight";
+import { WavyBackground } from "@/components/ui/wavy-background";
+
+function WavyBackgroundDemo() {
+  return (
+    <WavyBackground className="max-w-4xl mx-auto pb-40">
+      <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
+        Hero waves are cool
+      </p>
+      <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
+        Leverage the power of canvas to create a beautiful hero section
+      </p>
+    </WavyBackground>
+  );
+}
 
 function SpotlightPreview() {
   return (
@@ -54,12 +68,12 @@ export default function Home() {
 
       {/* Why Filecoin Section */}
       <section className="bg-[#60A5FA]/3 rounded-2xl p-12 border border-gray-700 relative">
-        <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(#60A5FA_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
+        <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(#6B7280_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
         <div className="max-w-4xl mx-auto space-y-8 relative">
-          <h2 className="text-3xl font-bold text-[#60A5FA] text-center">Why Filecoin?</h2>
+          <h2 className="text-3xl font-bold text-white text-center">Why Filecoin?</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4 bg-[#1E3A8A]/10 p-6 rounded-xl border border-gray-700 relative">
-              <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#60A5FA_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
+              <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#6B7280_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
               <div className="relative">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-[#60A5FA] rounded-full flex items-center justify-center">
@@ -73,7 +87,7 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-4 bg-[#1E3A8A]/10 p-6 rounded-xl border border-gray-700 relative">
-              <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#60A5FA_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
+              <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#6B7280_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
               <div className="relative">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-[#60A5FA] rounded-full flex items-center justify-center">
@@ -87,7 +101,7 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-4 bg-[#1E3A8A]/10 p-6 rounded-xl border border-gray-700 relative">
-              <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#60A5FA_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
+              <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#6B7280_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
               <div className="relative">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-[#60A5FA] rounded-full flex items-center justify-center">
@@ -101,7 +115,7 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-4 bg-[#1E3A8A]/10 p-6 rounded-xl border border-gray-700 relative">
-              <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#60A5FA_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
+              <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#6B7280_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
               <div className="relative">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-[#60A5FA] rounded-full flex items-center justify-center">
@@ -119,12 +133,12 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="text-center space-y-8">
-        <h2 className="text-3xl font-bold text-white">Ready to Transform Your Research?</h2>
-        <p className="text-xl text-white/80 max-w-2xl mx-auto">
+      <WavyBackground className="max-w-4xl mx-auto pb-40">
+        <h2 className="text-3xl font-bold text-white text-center">Ready to Transform Your Research?</h2>
+        <p className="text-xl text-white/80 max-w-2xl mx-auto text-center">
           Join the future of research dissemination. Publish your work, reach global audiences, and earn fair compensation.
         </p>
-        <div className="w-full">
+        <div className="w-full mt-8">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/upload" 
@@ -140,7 +154,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </WavyBackground>
     </div>
   );
 }
