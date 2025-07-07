@@ -14,7 +14,7 @@ const Navbar = () => {
           {/* Logo and brand name */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="text-3xl font-bold text-white">Starter</span>
+              <span className="text-3xl font-bold text-white">ReSearchFi</span>
             </Link>
           </div>
 
@@ -36,9 +36,7 @@ const Navbar = () => {
 
           {/* Connect Wallet Button */}
           <div className="hidden md:block">
-            <button className="bg-[#1E3A8A] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#2563EB] transition-colors">
-              Connect Wallet
-            </button>
+            <ConnectButton />
           </div>
 
           {/* Mobile menu button */}
@@ -90,9 +88,9 @@ const Navbar = () => {
             <Link href="/about" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#1E3A8A]">
               About
             </Link>
-            <button className="w-full mt-4 bg-[#1E3A8A] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#2563EB] transition-colors">
-            <ConnectButton/>
-            </button>
+            <div className="mt-4 px-3">
+              <ConnectButton />
+            </div>
           </div>
         </div>
       )}
