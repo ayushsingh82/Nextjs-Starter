@@ -53,12 +53,12 @@ export default function Home() {
       <SpotlightPreview />
 
       {/* Why Filecoin Section */}
-      <section className="bg-[#60A5FA]/3 rounded-2xl p-12 border border-[#60A5FA] relative">
+      <section className="bg-[#60A5FA]/3 rounded-2xl p-12 border border-gray-700 relative">
         <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(#60A5FA_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
         <div className="max-w-4xl mx-auto space-y-8 relative">
           <h2 className="text-3xl font-bold text-[#60A5FA] text-center">Why Filecoin?</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4 bg-[#1E3A8A]/10 p-6 rounded-xl border border-[#60A5FA]/10 relative">
+            <div className="space-y-4 bg-[#1E3A8A]/10 p-6 rounded-xl border border-gray-700 relative">
               <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#60A5FA_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
               <div className="relative">
                 <div className="flex items-center gap-3">
@@ -72,7 +72,7 @@ export default function Home() {
                 <p className="text-white/80 mt-4">Your research is stored on a trustless network, ensuring it remains accessible and unchanged.</p>
               </div>
             </div>
-            <div className="space-y-4 bg-[#1E3A8A]/10 p-6 rounded-xl border border-[#60A5FA]/10 relative">
+            <div className="space-y-4 bg-[#1E3A8A]/10 p-6 rounded-xl border border-gray-700 relative">
               <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#60A5FA_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
               <div className="relative">
                 <div className="flex items-center gap-3">
@@ -86,7 +86,7 @@ export default function Home() {
                 <p className="text-white/80 mt-4">Metadata and publishing proof are stored on-chain for complete transparency.</p>
               </div>
             </div>
-            <div className="space-y-4 bg-[#1E3A8A]/10 p-6 rounded-xl border border-[#60A5FA]/10 relative">
+            <div className="space-y-4 bg-[#1E3A8A]/10 p-6 rounded-xl border border-gray-700 relative">
               <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#60A5FA_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
               <div className="relative">
                 <div className="flex items-center gap-3">
@@ -100,7 +100,7 @@ export default function Home() {
                 <p className="text-white/80 mt-4">Smart contracts ensure fair revenue distribution for researchers.</p>
               </div>
             </div>
-            <div className="space-y-4 bg-[#1E3A8A]/10 p-6 rounded-xl border border-[#60A5FA]/10 relative">
+            <div className="space-y-4 bg-[#1E3A8A]/10 p-6 rounded-xl border border-gray-700 relative">
               <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#60A5FA_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
               <div className="relative">
                 <div className="flex items-center gap-3">
@@ -120,23 +120,25 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="text-center space-y-8">
-        <h2 className="text-3xl font-bold text-[#60A5FA]">Ready to Transform Your Research?</h2>
+        <h2 className="text-3xl font-bold text-white">Ready to Transform Your Research?</h2>
         <p className="text-xl text-white/80 max-w-2xl mx-auto">
           Join the future of research dissemination. Publish your work, reach global audiences, and earn fair compensation.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/upload" 
-            className="px-8 py-3 bg-[#1E3A8A] text-white rounded-lg font-medium hover:bg-[#2563EB] transition-colors"
-          >
-            Start Publishing
-          </Link>
-          <Link 
-            href="/about" 
-            className="px-8 py-3 border-2 border-[#60A5FA] text-[#60A5FA] rounded-lg font-medium hover:bg-[#60A5FA] hover:text-black transition-colors"
-          >
-            Learn More
-          </Link>
+        <div className="w-full">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/upload" 
+              className="px-8 py-3 bg-gray-700 text-white rounded-lg font-medium hover:bg-gray-600 transition-colors border border-gray-600"
+            >
+              Start Publishing
+            </Link>
+            <Link 
+              href="/about" 
+              className="px-8 py-3 border-2 border-gray-700 text-white rounded-lg font-medium hover:bg-gray-700 hover:text-white transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
       </section>
     </div>
