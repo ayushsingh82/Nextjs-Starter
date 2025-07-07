@@ -1,85 +1,56 @@
 import Link from 'next/link';
 
+import { cn } from "@/lib/utils";
+import { Spotlight } from "@/components/ui/Spotlight";
+
+function SpotlightPreview() {
+  return (
+    <div className="relative flex h-[40rem] w-full overflow-hidden rounded-md bg-black/[0.96] antialiased md:items-center md:justify-center">
+      <div
+        className={cn(
+          "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none",
+          "[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]",
+        )}
+      />
+ 
+      <Spotlight
+        className="-top-40 left-0 md:-top-20 md:left-60"
+        fill="white"
+      />
+      <div className="relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
+        <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
+          Spotlight <br /> is the new trend.
+        </h1>
+        <p className="mx-auto mt-4 max-w-lg text-center text-base font-normal text-neutral-300">
+          Spotlight effect is a great way to draw attention to a specific part
+          of the page. Here, we are drawing the attention towards the text
+          section of the page. I don&apos;t know why but I&apos;m running out of
+          copy.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <Link 
+            href="/explore" 
+            className="px-8 py-3 bg-[#1E3A8A] text-white rounded-lg font-medium hover:bg-[#2563EB] transition-colors"
+          >
+            Explore Research
+          </Link>
+          <Link 
+            href="/upload" 
+            className="px-8 py-3 border-2 border-[#60A5FA] text-[#60A5FA] rounded-lg font-medium hover:bg-[#60A5FA] hover:text-black transition-colors"
+          >
+            Publish Your Work
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <div className="space-y-24">
-      {/* Hero Section */}
-      <section className="relative">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-[#60A5FA] leading-tight">
-            From Knowledge to Experience
-          </h1>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Decentralized, Engaging, and Immutable Research Platform
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/explore" 
-              className="px-8 py-3 bg-[#1E3A8A] text-white rounded-lg font-medium hover:bg-[#2563EB] transition-colors"
-            >
-              Explore Research
-            </Link>
-            <Link 
-              href="/publish" 
-              className="px-8 py-3 border-2 border-[#60A5FA] text-[#60A5FA] rounded-lg font-medium hover:bg-[#60A5FA] hover:text-black transition-colors"
-            >
-              Publish Your Work
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div className="bg-[#1E3A8A]/20 p-8 rounded-xl border-2 border-[#60A5FA]/20 hover:border-[#60A5FA]/40 transition-all duration-300 shadow-lg shadow-[#1E3A8A]/10 relative group">
-          <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#60A5FA_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
-          <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-[#60A5FA]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-[border-beam_2s_ease-in-out_infinite]"></div>
-          <div className="relative">
-            <div className="w-12 h-12 bg-[#60A5FA] rounded-lg flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold text-[#60A5FA] mb-2">Upload Research</h3>
-            <p className="text-white/80">
-              Securely publish your academic work on Filecoin IPFS storage with guaranteed immutability.
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-[#60A5FA]/10 p-8 rounded-xl border-2 border-[#60A5FA]/30 hover:border-[#60A5FA]/50 transition-all duration-300 shadow-lg shadow-[#60A5FA]/10 relative overflow-hidden group">
-          <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#60A5FA_1px,transparent_1px)] [background-size:16px_16px] opacity-15"></div>
-          <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-[#60A5FA]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-[border-beam_2s_ease-in-out_infinite]"></div>
-          <div className="absolute inset-0 bg-[#60A5FA]"></div>
-          <div className="relative">
-            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold text-black mb-2">AI-Powered Visualization</h3>
-            <p className="text-white font-medium">
-              Transform dense papers into engaging videos, animations, and explainers automatically.
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-[#1E3A8A]/20 p-8 rounded-xl border-2 border-[#60A5FA]/20 hover:border-[#60A5FA]/40 transition-all duration-300 shadow-lg shadow-[#1E3A8A]/10 relative group">
-          <div className="absolute inset-0 rounded-xl bg-[radial-gradient(#60A5FA_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
-          <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-[#60A5FA]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-[border-beam_2s_ease-in-out_infinite]"></div>
-          <div className="relative">
-            <div className="w-12 h-12 bg-[#60A5FA] rounded-lg flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold text-[#60A5FA] mb-2">Earn Revenue</h3>
-            <p className="text-white/80">
-              Get paid for your research through our fair, transparent pay-per-access model.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Spotlight Section */}
+      <SpotlightPreview />
 
       {/* Why Filecoin Section */}
       <section className="bg-[#60A5FA]/3 rounded-2xl p-12 border border-[#60A5FA] relative">
@@ -155,7 +126,7 @@ export default function Home() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
-            href="/publish" 
+            href="/upload" 
             className="px-8 py-3 bg-[#1E3A8A] text-white rounded-lg font-medium hover:bg-[#2563EB] transition-colors"
           >
             Start Publishing
