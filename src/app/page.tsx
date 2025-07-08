@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { cn } from "@/lib/utils";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { WavyBackground } from "@/components/ui/wavy-background";
-
+import { Vortex } from "@/components/ui/vortex";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
@@ -12,6 +12,34 @@ const words = `Oxygen gets you high. In a catastrophic emergency, we're taking g
 function TextGenerateEffectDemo() {
   return <TextGenerateEffect words={"Hello, World!"} />;
 }
+
+function VortexDemo() {
+  return (
+    <div className="w-[calc(100%-4rem)] mx-auto rounded-md  h-[30rem] overflow-hidden">
+      <Vortex
+        backgroundColor="black"
+        className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
+      >
+        <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
+         Ready to transform your research?
+        </h2>
+        <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
+          This is chemical burn. It&apos;ll hurt more than you&apos;ve ever been
+          burned and you&apos;ll have a scar.
+        </p>
+        <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
+          <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
+            Order now
+          </button>
+          <button className="px-4 py-2  text-white ">Watch trailer</button>
+        </div>
+      </Vortex>
+    </div>
+  );
+}
+
+
+
 
 function WavyBackgroundDemo() {
   return (
@@ -147,35 +175,12 @@ export default function Home() {
         
 
         {/* CTA Section */}
-        <div className="text-center space-y-8">
-          <h2 className="text-3xl font-bold text-white">Ready to Transform Your Research?</h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Join the future of research dissemination. Publish your work, reach global audiences, and earn fair compensation.
-          </p>
-          <div className="w-full">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/upload" 
-                className="px-8 py-3 bg-gray-700 text-white rounded-lg font-medium hover:bg-gray-600 transition-colors border border-gray-600"
-              >
-                Start Publishing
-              </Link>
-              <Link 
-                href="/about" 
-                className="px-8 py-3 border-2 border-gray-700 text-white rounded-lg font-medium hover:bg-gray-700 hover:text-white transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Wavy Section Above Footer */}
-      
         
- 
-    
+
+        <VortexDemo/>
+
+
+      </div>
     
     </div>
   );

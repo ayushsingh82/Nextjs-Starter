@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
+
 interface Research {
   id: number;
   name: string;
@@ -162,6 +163,8 @@ export default function ExplorePage() {
           ))}
         </div>
       </div>
+
+      
     </div>
   );
 }
