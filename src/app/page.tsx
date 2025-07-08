@@ -6,6 +6,7 @@ import { WavyBackground } from "@/components/ui/wavy-background";
 import { Vortex } from "@/components/ui/vortex";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { BackgroundLines } from "@/components/ui/background-lines";
 // import { motion } from "motion/react";
 
 const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
@@ -13,6 +14,24 @@ const words = `Oxygen gets you high. In a catastrophic emergency, we're taking g
 
 function TextGenerateEffectDemo() {
   return <TextGenerateEffect words={"Hello, World!"} />;
+}
+
+function BackgroundLinesDemo() {
+  return (
+    <BackgroundLines className="flex items-center justify-center w-[650px] flex-col px-4">
+      <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
+        Starter Kit is ready to use
+      </h2>
+      <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
+        Get the best advices from our experts, including expert artists,
+        painters, marathon enthusiasts and RDX, totally free.
+      </p>
+      <button className="px-4 py-2 bg-blue-500 mt-4 text-white rounded-lg font-medium hover:bg-[#2563EB] transition-colors">
+        Get Started
+      </button>
+     
+    </BackgroundLines>
+  );
 }
 
 function HeroHighlightDemo() {
@@ -126,7 +145,7 @@ function WavyBackgroundDemo() {
 
 function SpotlightPreview() {
   return (
-    <div className="relative flex h-[40rem] w-full overflow-hidden rounded-md bg-black/[0.96] antialiased md:items-center md:justify-center">
+    <div className="relative flex h-[40rem] w-full overflow-hidden rounded-md bg-black/[0.96] antialiased md:items-center md:justify-center animate-float">
       <div
         className={cn(
           "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none",
@@ -142,24 +161,15 @@ function SpotlightPreview() {
         <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
           Spotlight <br /> is the new trend.
         </h1>
-        <p className="mx-auto mt-4 max-w-lg text-center text-base font-normal text-neutral-300">
-          Spotlight effect is a great way to draw attention to a specific part
-          of the page. Here, we are drawing the attention towards the text
-          section of the page. I don&apos;t know why but I&apos;m running out of
-          copy.
-        </p>
+        <div className="flex flex-col items-center justify-center ">
+        <BackgroundLinesDemo/>
+        </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
           <Link 
             href="/explore" 
             className="px-8 py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-[#2563EB] transition-colors"
           >
-            Explore Research
-          </Link>
-          <Link 
-            href="/upload" 
-            className="px-8 py-3 border-2 border-blue-500 text-[#60A5FA] rounded-lg font-medium hover:bg-[#60A5FA] hover:text-black transition-colors"
-          >
-            Publish Your Work
+            GET STARTED
           </Link>
         </div>
       </div>
@@ -174,22 +184,9 @@ export default function Home() {
       <SpotlightPreview />
 
       <HeroHighlightDemo/>
-
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-24">
-        {/* Why Filecoin Section */}
-       
-
         
-
-        {/* CTA Section */}
-        
-
         <VortexDemo/>
-
-
-      </div>
-    
+        
     </div>
   );
 }
